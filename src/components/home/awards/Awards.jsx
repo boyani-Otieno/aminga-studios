@@ -1,30 +1,37 @@
-import React from "react"
-import Heading from "../../common/Heading"
-import { awards } from "../../data/Data"
-import "./awards.css"
+import React from 'react';
+import Feature from '../featured/FeaturedCard';
+import './awards.css';
 
-const Awards = () => {
-  return (
-    <>
-      <section className='awards padding'>
-        <div className='container'>
-          <Heading title='Impressive Achievements: Noteworthy Awards Earned on Our Journey' subtitle='Our Awards' />
+const featuresData = [
+  {
+    title: 'Innovation & Creativity',
+    text: 'We embrace innovation in design, constantly seeking new ideas and approaches to create unique and functional spaces that inspire.',
+  },
+  {
+    title: 'Excellence & Sustainability',
+    text: 'We are committed to achieving excellence in every aspect of our work, from initial concept to final execution, ensuring exceptional quality and client satisfaction.',
+  },
+  {
+    title: 'Integrity & Collaboration',
+    text: ' We uphold integrity in all our interactions and decisions, fostering trust and transparency while adhering to ethical standards in our industry.',
+  },
+  {
+    title: 'Client-Centric Approach',
+    text: 'We prioritize understanding and meeting the unique requirements of our clients, ensuring their vision and goals are realized through personalized and responsive design solutions.',
+  },
+];
 
-          <div className='content grid4 mtop'>
-            {awards.map((val, index) => (
-              <div className='box' key={index}>
-                <div className='icon'>
-                  <span>{val.icon}</span>
-                </div>
-                <h1>{val.num}</h1>
-                <p>{val.name}</p>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-    </>
-  )
-}
+const Features = () => (
+  <div className="gpt3__features section__padding" id="features">
+    <div className="gpt3__features-heading">
+      <h1 className="gradient__text">Embrace the future today with our visionary architectural model designs. Step into tomorrow and make it a reality.</h1>
+    </div>
+    <div className="gpt3__features-container">
+      {featuresData.map((item, index) => (
+        <Feature title={item.title} text={item.text} key={item.title + index} />
+      ))}
+    </div>
+  </div>
+);
 
-export default Awards
+export default Features;

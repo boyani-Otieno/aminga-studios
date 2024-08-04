@@ -1,34 +1,62 @@
-.awards {
-  background-color: #fff;
-  color: #190019;
-  text-align: center;
-}
-.awards .heading {
+.gpt3__features {
+  width: 100%;
   display: flex;
-  flex-direction: column-reverse;
+  justify-content: space-between;
+  flex-direction: row;
+  padding: 6rem;
+  margin-top: 5rem;
 }
-.awards .heading p {
-  color: #ecb1c0;
+
+.gpt3__features-heading {
+  flex: 1;
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+  flex-direction: column;
+
+  text-align: left;
+  margin-right: 5rem;
 }
-.awards .heading h1 {
-  color: #190019;
-  font-size: 30px;
-  font-weight: 400;
+
+.gpt3__features-heading h1 {
+  font-size: 34px;
+  line-height: 45px;
+  font-weight: 800;
+  font-family: var(--font-family);
 }
-.awards .icon {
-  width: 100px;
-  height: 100px;
-  line-height: 100px;
-  margin: auto;
-  margin-top: 50px;
-  background: #ecb1c0;
-  border-radius: 4% 50%;
-  font-size: 32px;
-  color: #ffffff;
+
+.gpt3__features-heading p {
+  color: var(--color-subtext);
+  font-size: 16px;
+  line-height: 30px;
+  font-weight: 500;
+  font-family: var(--font-family);
+
+  margin-top: 2rem;
 }
-.awards h1 {
-  font-size: 50px;
+
+.gpt3__features-container {
+  flex: 1.5;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  flex-direction: column;
 }
-.awards p {
-  color: grey;
+
+@media screen and (max-width: 990px) {
+  .gpt3__features {
+      flex-direction: column;
+  }
+
+  .gpt3__features-heading {
+      margin: 0 0 2rem 0;
+  }
+}
+
+
+@media screen and (max-width: 550px) {
+  .gpt3__features-heading h1 {
+      font-size: 28px;
+      line-height: 38px;
+  }
 }

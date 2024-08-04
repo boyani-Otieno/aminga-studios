@@ -1,7 +1,7 @@
 import React from "react";
-// import { GiInspiration } from "react-icons/gi";
-import Heading from "../../common/Heading";
+import { Typewriter } from 'react-simple-typewriter';
 import { motion } from "framer-motion";
+import Heading from "../../common/Heading";
 import "./hero.css";
 
 const Hero = () => {
@@ -16,10 +16,10 @@ const Hero = () => {
     },
   };
 
-  // const textVariants = {
-  //   hidden: { opacity: 0, y: 20 },
-  //   visible: { opacity: 1, y: 0, transition: { duration: 0.5 } },
-  // };
+  const textVariants = {
+    hidden: { opacity: 0, y: 20 },
+    visible: { opacity: 1, y: 0, transition: { duration: 0.5 } },
+  };
 
   return (
     <section className='hero'>
@@ -29,7 +29,22 @@ const Hero = () => {
           animate="visible"
           variants={containerVariants}
         >
-          <Heading title='Welcome to Aminga Studios!' subtitle='Where we are building your dreams.' />
+          <motion.div variants={textVariants}>
+            <Heading
+              title={
+                <Typewriter
+                  words={['Welcome to Aminga Studios!']}
+                  loop={false}
+                  cursor
+                  cursorStyle='_'
+                  typeSpeed={70}
+                  deleteSpeed={50}
+                  delaySpeed={1000}
+                />
+              }
+              subtitle='Where we are building your dreams.'
+            />
+          </motion.div>
         </motion.div>
       </div>
     </section>

@@ -5,6 +5,7 @@
   grid-template-columns: 1fr 1fr;
   gap: 5%;
   background-color: #fff;
+  margin-top: 8rem;
 }
 
 .about-content h1 {
