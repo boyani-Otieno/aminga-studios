@@ -1,21 +1,99 @@
-.recent .text {
-  padding: 30px;
+/* In your CSS file or in your component's CSS */
+@import "~slick-carousel/slick/slick.css";
+@import "~slick-carousel/slick/slick-theme.css";
+
+/* In your CSS file */
+.slider-container {
+  width: 100%;
+  margin: auto;
+  margin-top: 5rem;
+  background-color: #f0f0f0;
 }
-.recent .category span {
-  padding: 4px 15px;
-  border-radius: 2px;
-  font-weight: 600;
-  font-size: 13px;
-  display: inline-block;
+.slider-container h1{
+   margin: 2rem;
 }
-.recent .category i {
-  font-size: 20px;
-  color: #bec7d8;
+
+.slide {
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
-.recent p {
-  color: #72809d;
+
+.slide-content {
+  display: flex;
+  align-items: center;
+  /* background: #fff; */
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  text-align: left;
+  width: 80%;
+  margin: auto;
+  padding: 20px;
 }
-.recent .button {
-  border-top: 1px solid #e4e8f3;
-  padding: 10px 30px;
+
+.slide-image {
+  width: 50%;
+  height: auto;
+  /* border-radius: 10px; */
+  margin-right: 100px;
+}
+
+.text-content {
+  padding: 20px;
+}
+
+.text-content h2 {
+  font-size: 24px;
+  margin-bottom: 10px;
+}
+
+.text-content p {
+  font-size: 16px;
+  color: #666;
+}
+
+@media screen and (max-width: 768px) {
+  .slide-content {
+    flex-direction: column;
+    padding: 10px;
+  }
+
+  .slide-image {
+    width: 100%;
+    margin-right: 0;
+    margin-bottom: 20px;
+  }
+
+  .text-content {
+    padding: 10px;
+    text-align: center;
+  }
+
+  .text-content h2 {
+    font-size: 20px;
+  }
+
+  .text-content p {
+    font-size: 14px;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .slider-container {
+    width: 100%;
+  }
+
+  .slide-content {
+    width: 90%;
+    padding: 10px;
+  }
+
+  .text-content h2 {
+    font-size: 18px;
+  }
+
+  .text-content p {
+    font-size: 12px;
+  }
 }
