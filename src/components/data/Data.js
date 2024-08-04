@@ -13,7 +13,7 @@ export const nav = [
   },
   {
     text: "Gallery",
-    path: "/blog",
+    path: "/gallery",
   },
   {
     text: "contact",
