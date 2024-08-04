@@ -1,11 +1,10 @@
-import React, { useState } from "react"
-import "./header.css"
-import { nav } from "../../data/Data"
-import { Link } from "react-router-dom"
-
+import React, { useState } from "react";
+import "./header.css";
+import { nav } from "../../data/Data";
+import { Link } from "react-router-dom";
 
 const Header = () => {
-  const [navList, setNavList] = useState(false)
+  const [navList, setNavList] = useState(false);
 
   return (
     <>
@@ -24,18 +23,21 @@ const Header = () => {
             </ul>
           </div>
           <div className='button flex'>
-             <button className='btn1'><a className="champion" href="/contact" alt="contact">
-              <h3>Hire Us</h3></a>
+            <button className='btn1'>
+              <a className="champion" href="/contact" alt="contact">
+                <h3>Hire Us</h3>
+              </a>
             </button>
           </div>
-
           <div className='toggle'>
-            <button onClick={() => setNavList(!navList)}>{navList ? <i className='fa fa-times'></i> : <i className='fa fa-bars'></i>}</button>
+            <button className="tog" onClick={() => setNavList(!navList)}>
+              {navList ? <i className='fa fa-times'></i> : <i className='fa fa-bars'></i>}
+            </button>
           </div>
         </div>
       </header>
     </>
-  )
-}
+  );
+};
 
-export default Header
+export default Header;

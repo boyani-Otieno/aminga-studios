@@ -1,5 +1,6 @@
 import React from 'react';
-// import gpt3Logo from '../../assets/v.png';
+import gpt3Logo from '../../../assets/images/v logo.jpeg';
+import { BsTwitterX } from "react-icons/bs";
 import './footer.css';
 
 const Footer = () => (
@@ -14,12 +15,12 @@ const Footer = () => (
 
     <div className="gpt3__footer-links">
       <div className="gpt3__footer-links_logo">
-        {/* <img src={gpt3Logo} alt="gpt3_logo" /> */}
+        <img src={gpt3Logo} alt="gpt3_logo" />
         <p> ABC Towers, 6th floor,. ABC Place, Waiyaki Way,. P.O Box -00100. Nairobi, <br /> All Rights Reserved</p>
       </div>
       <div className="gpt3__footer-links_div">
-        <h4>Links</h4>
-        <p>Overons</p>
+        <h4>Socials</h4>
+        <p><a href='https://twitter.com'><BsTwitterX /></a></p>
         <p>Social Media</p>
         <p>Counters</p>
         <p>Contact</p>
@@ -32,14 +33,14 @@ const Footer = () => (
       </div>
       <div className="gpt3__footer-links_div">
         <h4>Get in touch</h4>
-        <p>Vincent Onditi Model Designs</p>
+        <p>Aminga Studios</p>
         <p>+254 712345678</p>
-        <p>vincentonditi111@gmail.com</p>
+        <p>vincentonditi@gmail.com</p>
       </div>
     </div>
 
     <div className="gpt3__footer-copyright">
-      <p>@2024 V-Designs. All rights reserved.</p>
+      <p>@2024 Aminga Studios. All rights reserved.</p>
     </div>
   </div>
 );
