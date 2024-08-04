@@ -16,7 +16,7 @@ header a {
   font-weight: 500;
 }
 header a:hover {
-  color: #ecd8e0;
+  color: grey;
   text-decoration: underline;
 }
 .logo h3{

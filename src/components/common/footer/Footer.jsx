@@ -1,55 +1,47 @@
-import React from "react"
-import { footer } from "../../data/Data"
-import "./footer.css"
+import React from 'react';
+// import gpt3Logo from '../../assets/v.png';
+import './footer.css';
 
-const Footer = () => {
-  return (
-    <>
-      {/* <section className='footerContact'>
-        <div className='container'>
-          <div className='send flex'>
-            <div className='text'>
-              <h1>Do You Have Questions ?</h1>
-              <p>We'll help you to grow your career and growth.</p>
-            </div>
-            <button className='btn5'>Contact Us Today</button>
-          </div>
-        </div>
-      </section> */}
+const Footer = () => (
+  <div className="gpt3__footer section__padding">
+    <div className="gpt3__footer-heading">
+      <h1 className="gradient__text">Do you want the best Architectural model designs in the Market?</h1>
+    </div>
 
-      <footer>
-        <div className='container'>
-          <div className='box'>
-            <div className='logo'>
-              {/* <img src='../images/logo-light.png' alt='' /> */}
-              <h1>Margaret Robi Foundation</h1>
-              <h2>Do You Need Help With Anything?</h2>
-              <p>Receive updates, hot deals, tutorials, discounts sent straignt in your inbox every month</p>
+    <div className="gpt3__footer-btn">
+      <p><a href='/contact' alt="contact">Contact us today!</a></p>
+    </div>
 
-              <div className='input flex'>
-                <input type='text' placeholder='Email Address' />
-                <button>Subscribe</button>
-              </div>
-            </div>
-          </div>
-
-          {footer.map((val) => (
-            <div className='box'>
-              <h3>{val.title}</h3>
-              <ul>
-                {val.text.map((items) => (
-                  <li> {items.list} </li>
-                ))}
-              </ul>
-            </div>
-          ))}
-        </div>
-      </footer>
-      <div className='legal'>
-        <span>© 2024 MARGARET ROBI FOUNDATION. Designd By boyani_codes.</span>
+    <div className="gpt3__footer-links">
+      <div className="gpt3__footer-links_logo">
+        {/* <img src={gpt3Logo} alt="gpt3_logo" /> */}
+        <p> ABC Towers, 6th floor,. ABC Place, Waiyaki Way,. P.O Box -00100. Nairobi, <br /> All Rights Reserved</p>
       </div>
-    </>
-  )
-}
+      <div className="gpt3__footer-links_div">
+        <h4>Links</h4>
+        <p>Overons</p>
+        <p>Social Media</p>
+        <p>Counters</p>
+        <p>Contact</p>
+      </div>
+      <div className="gpt3__footer-links_div">
+        <h4>Company</h4>
+        <p>Terms & Conditions </p>
+        <p>Privacy Policy</p>
+        <p>Contact</p>
+      </div>
+      <div className="gpt3__footer-links_div">
+        <h4>Get in touch</h4>
+        <p>Vincent Onditi Model Designs</p>
+        <p>+254 712345678</p>
+        <p>vincentonditi111@gmail.com</p>
+      </div>
+    </div>
 
-export default Footer
+    <div className="gpt3__footer-copyright">
+      <p>@2024 V-Designs. All rights reserved.</p>
+    </div>
+  </div>
+);
+
+export default Footer;
