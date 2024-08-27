@@ -44,8 +44,8 @@
 
 .gpt3__footer-links {
   display: flex;
-  justify-content: space-between;
-  align-items: flex-start;
+  justify-content: center;
+  align-items: center;
   flex-direction: row;
   flex-wrap: wrap;
 
@@ -79,7 +79,7 @@
 
 .gpt3__footer-links_div {
   display: flex;
-  justify-content: flex-start;
+  justify-content: center;
   flex-direction: column;
 }
 

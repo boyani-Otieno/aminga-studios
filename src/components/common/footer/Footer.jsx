@@ -16,7 +16,7 @@ const Footer = () => (
     <div className="gpt3__footer-links">
       <div className="gpt3__footer-links_logo">
         <img src={gpt3Logo} alt="gpt3_logo" />
-        <p> ABC Towers, 6th floor,. ABC Place, Waiyaki Way,. P.O Box -00100. Nairobi, <br /> All Rights Reserved</p>
+        <p> Lavington Mall 6th floor. P.O Box -74801-00200. Nairobi, <br /> All Rights Reserved</p>
       </div>
       <div className="gpt3__footer-links_div">
         <h4>Socials</h4>
@@ -35,7 +35,7 @@ const Footer = () => (
         <h4>Get in touch</h4>
         <p>Aminga Studios</p>
         <p>+254 712345678</p>
-        <p>vincentonditi@gmail.com</p>
+        <p>vamigat@gmail.com</p>
       </div>
     </div>
 

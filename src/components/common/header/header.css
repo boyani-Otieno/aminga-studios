@@ -38,12 +38,23 @@ header h4 {
 header .toggle {
   display: none;
 }
+
+.top-logo{
+    width: 96px;
+    height: 80px;
+  }
+
 @media screen and (max-width: 768px) {
   header {
     padding: 0;
   }
   header img {
     margin-top: 30px;
+  }
+  .top-logo{
+    width: 96px;
+    height: 80px;
+    margin: 0rem;
   }
   header .button {
     display: none;
