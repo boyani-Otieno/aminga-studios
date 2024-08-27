@@ -1,20 +1,41 @@
-import React from "react"
-import img from "../images/services.jpg"
-import Back from "../common/Back"
-import "../home/featured/Featured.css"
-import FeaturedCard from "../home/featured/FeaturedCard"
+import { Data } from "./serviceData";
+import { useEffect, useState } from "react";
+import './services.css'
 
-const Services = () => {
+function Service() {
+
+  const [data,setData] = useState([]);
+  const [collection,setCollection] = useState([]);
+
+  useEffect(()=>{
+    setData(Data);
+    setCollection([...new Set(Data.map((item)=> item.titile))])
+  },[]) 
+  
+  const gallery_filter = (itemData) =>{
+    const filterData = Data.filter((item)=> item.titile === itemData);
+    setData(filterData);
+  }
+
   return (
-    <>
-      <section className='services mb'>
-        <Back name='Services' title='Services -All Services' cover={img} />
-        <div className='featured container'>
-          <FeaturedCard />
+    <div className="App">
+      <div className="galleryWrapper">
+        <div className="filterItem">
+          <ul>
+            <li><button onClick={()=> setData(Data)}>All</button></li>
+            {
+              collection.map((item)=> <li><button onClick={()=>{gallery_filter(item)}}>{item}</button></li>)
+            }
+          </ul>
         </div>
-      </section>
-    </>
-  )
+        <div className="galleryContainer">
+          {
+            data.map((item)=> <div  key={item.id} className="galleryItem"><img src={item.image  } alt="p"/></div> )
+          }
+        </div>
+      </div>
+    </div>
+  );
 }
 
-export default Services
+export default Service;

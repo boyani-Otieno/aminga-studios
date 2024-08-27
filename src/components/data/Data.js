@@ -9,7 +9,7 @@ export const nav = [
   },
   {
     text: "Our Projects",
-    path: "/action",
+    path: "/services",
   },
   {
     text: "Gallery",
